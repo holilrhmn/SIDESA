@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'Frontend\PengumumanController@index')->name('homepage');
+Route::get('/', 'Frontend\PengumumanController@profil')->name('profil');
+Route::get('/homepage', 'Frontend\PengumumanController@index')->name('homepage');
 Route::get('/pengumuman/{pengumuman}','Frontend\PengumumanController@show')->name('pengumuman.show');
 Route::get('/pengumuman', 'Frontend\HalamanController@pengumuman')->name('pengumuman');
 Route::post('/pengumuman/{pengumuman}/comment', 'Frontend\PengumumanCommentController@store')->name('comment.store')->middleware('auth');

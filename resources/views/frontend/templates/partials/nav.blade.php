@@ -1,17 +1,20 @@
 <div class="navbar-fixed">
     <nav  class="teal lighten-2">
             <div class="nav-wrapper">
-            <a href="{{ route('homepage') }}" class="brand-logo"><b>SIDESA</b></a>
+            <a href="{{ route('homepage') }}" class="brand-logo"><b class="white-text">SIDESA</b></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li class="{{ Route::currentRouteNamed('homepage') ? 'active' : '' }}">
-                    <a href="{{ route('homepage') }}">Beranda</a>
+                    <a class="white-text" href="{{ route('homepage') }}">Beranda</a>
+                </li>
+                <li class="{{ Route::currentRouteNamed('profil') ? 'active' : '' }}">
+                    <a class="white-text" href="{{ route('profil') }}">Profil Desa</a>
                 </li>
                 <li class="{{ Route::currentRouteNamed('pengumuman') ? 'active' : '' }}">
-                    <a href="{{ route('pengumuman') }}">Pengumuman</a>
+                    <a class="white-text" href="{{ route('pengumuman') }}">Pengumuman</a>
                 </li>
                 <li class="{{ Route::currentRouteNamed('kontak') ? 'active' : '' }}">
-                    <a href="{{ route('kontak') }}">Kontak</a>
+                    <a class="white-text" href="{{ route('kontak') }}">Kontak</a>
                 </li>
 
                 @guest
@@ -20,7 +23,7 @@
                 @else
             <ul id="dropdown1" class="dropdown-content">
                 <li>
-                    @if (auth()->user()->name == 'Admin Desa')
+                    @if (auth()->user()->hasRole('Admin'))
                         <a href="{{ route ('admin.dashboard') }}"> Dashboard</a>
                     @else
                         <a href="{{ route ('home') }}">Home</a>
@@ -42,12 +45,16 @@
     <li class="{{ Route::currentRouteNamed('homepage') ? 'active' : '' }}">
         <a href="{{ route('homepage') }}">Beranda</a>
     </li>
+    <li class="{{ Route::currentRouteNamed('profil') ? 'active' : '' }}">
+        <a href="{{ route('profil') }}">Profil Desa</a>
+    </li>
     <li class="{{ Route::currentRouteNamed('pengumuman') ? 'active' : '' }}">
-        <a href="{{ route('pengumuman') }}">Pengumuman</a>
+        <a  href="{{ route('pengumuman') }}">Pengumuman</a>
     </li>
     <li class="{{ Route::currentRouteNamed('kontak') ? 'active' : '' }}">
-        <a href="{{ route('kontak') }}">Kontak</a>
+        <a  href="{{ route('kontak') }}">Kontak</a>
     </li>
+
     @guest
     <li><a href="{{route ('login') }}">Masuk</a></li>
     <li><a href="{{route ('register') }}">Daftar</a></li>

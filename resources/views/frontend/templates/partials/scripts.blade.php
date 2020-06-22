@@ -10,3 +10,5 @@
             interval: 3000
         });
 </script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ asset('assets/js/init.js') }}"></script>

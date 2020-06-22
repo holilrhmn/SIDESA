@@ -21,6 +21,7 @@ class PengumumanCommentController extends Controller
            'message' => $request->message,
        ]);
 
-       return redirect()->back()->with('toast_message','Komentar Berhasil Dikirim..');
+       return redirect()->back()->with('success_message', 'Komentar Berhasil Dikirim.');
     }
+
 }

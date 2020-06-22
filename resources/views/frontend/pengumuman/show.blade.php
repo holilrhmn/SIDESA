@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <div class="col s12 m12">
+        @if (session('success_message'))
+        <div class="card-panel green accent-3 white-text">
+           <b> {{ session('success_message') }} </b>
+        </div>
+        @endif
         <div class="card hoverable">
             {{-- <div class="card-image"> --}}
                 <img src="{{ $pengumuman->getGambar()  }}"height="380x">
@@ -41,10 +46,5 @@
         </div>
     </div>
 </div>
-    @if (session('success_message'))
-    <div class="alert alert-success">
-        {{ session('success_message') }}
-    </div>
-    @endif
     @include('sweetalert::alert')
 @endsection
