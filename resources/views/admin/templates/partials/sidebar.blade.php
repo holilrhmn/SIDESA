@@ -14,7 +14,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link {{ setActive('admin') }}">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Laporan
@@ -31,13 +31,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ route('admin.warga.index') }}" class="nav-link">
+                    <a href="{{ route('admin.warga.index') }}" class="nav-link {{ setActive('admin/warga') }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Data Warga</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('admin.warga.restore') }}" class="nav-link">
+                    <a href="{{ route('admin.warga.restore') }}" class="nav-link {{ setActive('admin/warga-restore') }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Pemulihan Warga</p>
                     </a>
@@ -54,13 +54,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ route('admin.perkebunan.index') }}" class="nav-link">
+                    <a href="{{ route('admin.perkebunan.index') }}" class="nav-link {{ setActive('admin/perkebunan') }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Data Perkebunan</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('admin.perkebunan.restore') }}" class="nav-link">
+                    <a href="{{ route('admin.perkebunan.restore') }}" class="nav-link {{ setActive('admin/perkebunan-restore') }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Pemulihan Perkebunan</p>
                     </a>
@@ -68,15 +68,33 @@
                 </ul>
               </li>
           <li class="nav-item">
-            <a href="{{ route('admin.kontak.show') }}" class="nav-link">
+            <a href="{{ route('admin.kontak.show') }}" class="nav-link {{ setActive('admin/kontak') }}">
               <i class="nav-icon fas fa-comment-alt"></i>
               <p>Pesan Masuk</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('admin.komentar.show') }}" class="nav-link">
+            <a href="{{ route('admin.komentar.show') }}" class="nav-link {{ setActive('admin/komentar') }}">
               <i class="nav-icon fas fa-comments"></i>
               <p>Komentar</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.pengumuman.index') }}" class="nav-link {{ setActive('admin/pengumuman') }}">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>Pengumuman</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.slider.index') }}" class="nav-link {{ setActive('admin/slider') }}">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>Slider</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.profil.index') }}" class="nav-link {{ setActive('admin/profil') }}">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>Profil Desa</p>
             </a>
           </li>
         </ul>

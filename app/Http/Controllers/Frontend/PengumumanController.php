@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Pengumuman;
 use App\Perkebunan;
 use App\Warga;
-
+use App\Profil;
 class PengumumanController extends Controller
 {
     public function index()
@@ -22,7 +22,8 @@ class PengumumanController extends Controller
     {
         $warga = Warga::all()->count();
         $kebun = Perkebunan::all()->count();
-        return view('frontend.profil.index',compact('warga','kebun'));
+        $profil = Profil::all();
+        return view('frontend.profil.index',compact('warga','kebun','profil'));
     }
 
     public function show(Pengumuman $pengumuman)
@@ -32,5 +33,5 @@ class PengumumanController extends Controller
         ]);
     }
 
-    
+
 }

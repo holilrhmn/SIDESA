@@ -10,4 +10,5 @@
     <link href="{{ asset('assets/css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <title>Home Page</title>
+    @laravelPWA
 </head>

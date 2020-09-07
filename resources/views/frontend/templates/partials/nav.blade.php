@@ -23,7 +23,7 @@
                 @else
             <ul id="dropdown1" class="dropdown-content">
                 <li>
-                    @if (auth()->user()->hasRole('Admin'))
+                    @if (auth()->user()->hasRole('admin'))
                         <a href="{{ route ('admin.dashboard') }}"> Dashboard</a>
                     @else
                         <a href="{{ route ('home') }}">Home</a>

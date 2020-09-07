@@ -41,7 +41,7 @@ Breadcrumbs::for('admin.warga.show', function ($trail, $warga) {
 Breadcrumbs::for('admin.perkebunan.index', function ($trail) {
     $trail->push('Beranda', route('admin.dashboard'));
     $trail->push('Perkebunan', route('admin.perkebunan.index'));
-    
+
 });
 
 Breadcrumbs::for('admin.perkebunan.restore', function ($trail) {
@@ -111,3 +111,63 @@ Breadcrumbs::for('admin.komentar.show', function ($trail) {
 });
 
 
+// Paralax Index
+Breadcrumbs::for('admin.paralax.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Paralax', route('admin.paralax.index'));
+});
+
+// paralax Add
+Breadcrumbs::for('admin.paralax.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Paralax', route('admin.paralax.index'));
+    $trail->push('Tambah Paralax', route('admin.paralax.create'));
+});
+
+// Paralax Edit
+Breadcrumbs::for('admin.paralax.edit', function ($trail, $paralax) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Paralax', route('admin.paralax.index'));
+    $trail->push('Edit Paralax', route('admin.paralax.edit', $paralax));
+});
+
+// Slider Index
+Breadcrumbs::for('admin.slider.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Slider', route('admin.slider.index'));
+});
+
+// Slider Add
+Breadcrumbs::for('admin.slider.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Slider', route('admin.slider.index'));
+    $trail->push('Tambah Slider', route('admin.slider.create'));
+});
+
+// Slider Edit
+Breadcrumbs::for('admin.slider.edit', function ($trail, $slider) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Slider', route('admin.slider.index'));
+    $trail->push('Edit Slider', route('admin.slider.edit', $slider));
+});
+
+
+// Profil Index
+Breadcrumbs::for('admin.profil.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Profil', route('admin.profil.index'));
+});
+
+// Profil Add
+Breadcrumbs::for('admin.profil.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Profil', route('admin.profil.index'));
+    $trail->push('Tambah Profil', route('admin.profil.create'));
+});
+
+// Profil Edit
+Breadcrumbs::for('admin.profil.edit', function ($trail, $profil) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Profil', route('admin.profil.index'));
+    $trail->push('Edit Profil', route('admin.profil.edit', $profil));
+});

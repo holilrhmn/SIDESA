@@ -33,8 +33,6 @@ class ContactController extends Controller
 
         $contact->save();
 
-
-
         return response()->json(['success'=>'Status change successfully.']);
 
     }

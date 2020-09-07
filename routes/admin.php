@@ -7,6 +7,7 @@ Route::get('/perkebunan/data', 'DataController@perkebunans')->name('perkebunan.d
 Route::get('/pengumuman/data', 'DataController@pengumumans')->name('pengumuman.data');
 Route::get('/kontak/data', 'DataController@contacts')->name('kontak.data');
 Route::get('/komentar/data', 'DataController@comments')->name('komentar.data');
+Route::get('/paralax/data', 'DataController@paralax')->name('paralax.data');
 // data warga
 Route::resource('warga', 'WargaController');
 Route::get('export-warga','ExportController@warga')->name('warga.excel');
@@ -36,3 +37,8 @@ Route::get('kontak/changeStatus', 'ContactController@changeStatus')->name('conta
 //data Komentar
 Route::get('/komentar', 'KomentarController@index')->name('komentar.show');
 Route::delete('/komentar/{comment}', 'KomentartController@destroy')->name('komentar.destroy');
+
+
+Route::resource('slider', 'SliderController');
+Route::resource('profil', 'ProfilController');
+Route::resource('paralax', 'ParalaxController');

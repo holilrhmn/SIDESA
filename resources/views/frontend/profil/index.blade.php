@@ -46,18 +46,19 @@
 
   <div class="container">
     <div class="section">
+    @foreach ($profil as $p)
+
 
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Sejarah Desa</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <p class="left-align light">{!! $p->sejarah!!}</p>
         </div>
       </div>
 
     </div>
   </div>
-
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -69,9 +70,24 @@
     </div>
     <div class="parallax"><img src="{{ asset('assets/frontend_user/pemandangan2.jpg') }}" alt="Unsplashed background img 3"></div>
   </div>
-
+  <section id="about" class="about">
+    <div class="container">
+        <div class="row">
+             <h4 class="center light grey-text text-darken-3 ">Tentang SIDESA</h4>
+             <div class="col m6 light">
+                 <h5>SIDESA</h5>
+                 <p>{!! $p->tentang !!}</p>
+             </div>
+             <div class="col m6 light">
+                 <h5>Fungsi SIDESA</h5>
+                 <p>{{ $p->fungsi }}</p>
+             </div>
+        </div>
+    </div>
+</section>
+  @endforeach
   <!--  Scripts-->
-  
+
   <script type="text/javascript">
      function animateValue(obj, start = 0, end = null, duration = 3000) {
     if (obj) {
@@ -161,5 +177,5 @@ animateValue(document.getElementById("count"));
 
 animateValue(document.getElementById("counter"));
  </script>
-    
+
 @endsection

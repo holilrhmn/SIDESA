@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Warga;
 use App\Pengumuman;
 use App\Comment;
+use App\Paralax;
 use App\User;
 
 class DataController extends Controller
@@ -81,4 +82,18 @@ class DataController extends Controller
             ->addIndexColumn()
             ->toJson();
     }
+
+    public function paralax()
+    {
+        $paralax = Paralax::orderBy('created_at', 'ASC');
+        return datatables()->of($paralax)
+            ->editColumn('cover', function(Paralax $model) {
+                return '<img src="'. $model->getGambar() .'"  height="100px">';
+            })
+            ->addColumn('action','admin.paralax.action')
+            ->rawColumns(['cover','action'])
+            ->addIndexColumn()
+            ->toJson();
+    }
+
 }
