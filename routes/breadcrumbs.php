@@ -171,3 +171,47 @@ Breadcrumbs::for('admin.profil.edit', function ($trail, $profil) {
     $trail->push('Profil', route('admin.profil.index'));
     $trail->push('Edit Profil', route('admin.profil.edit', $profil));
 });
+
+//kategori surat
+Breadcrumbs::for('admin.kategori-surat.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Kategori-Surat', route('admin.kategori-surat.index'));
+});
+
+// kategori-surat add
+Breadcrumbs::for('admin.kategori-surat.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Kategori-Surat', route('admin.kategori-surat.index'));
+    $trail->push('Tambah Kategori', route('admin.kategori-surat.create'));
+});
+
+// Kategori Surat Edit
+Breadcrumbs::for('admin.kategori-surat.edit', function ($trail, $kategoriSurat) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Kategori-Surat', route('admin.kategori-surat.index'));
+    $trail->push('Edit Kategori', route('admin.kategori-surat.edit', $kategoriSurat));
+});
+
+//surat 
+Breadcrumbs::for('admin.arsip-surat.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('arsip-surat-masuk', route('admin.arsip-surat.index'));
+});
+Breadcrumbs::for('admin.arsip-surat.keluar', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('arsip-surat-keluar', route('admin.arsip-surat.keluar'));
+});
+// kategori-surat add
+Breadcrumbs::for('admin.arsip-surat.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Tambah-Arsip', route('admin.arsip-surat.create'));
+});
+
+// Kategori Surat Edit
+Breadcrumbs::for('admin.arsip-surat.edit', function ($trail, $arsipSurat) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Surat', route('admin.arsip-surat.index'));
+    $trail->push('Edit Kategori', route('admin.arsip-surat.edit', $arsipSurat));
+});
+
+

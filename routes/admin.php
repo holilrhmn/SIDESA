@@ -42,3 +42,6 @@ Route::delete('/komentar/{comment}', 'KomentartController@destroy')->name('komen
 Route::resource('slider', 'SliderController');
 Route::resource('profil', 'ProfilController');
 Route::resource('paralax', 'ParalaxController');
+Route::resource('kategori-surat', 'KategoriSuratController');
+Route::resource('arsip-surat', 'ArsipSuratController');
+Route::get('/arsip-surat-keluar', 'ArsipSuratController@index2')->name('arsip-surat.keluar');

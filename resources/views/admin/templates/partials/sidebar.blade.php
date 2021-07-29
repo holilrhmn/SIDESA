@@ -97,6 +97,41 @@
               <p>Profil Desa</p>
             </a>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Arsip Surat
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.kategori-surat.index') }}" class="nav-link {{ setActive('admin/kategori-surat') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Kategori Surat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.arsip-surat.create') }}" class="nav-link {{ setActive('admin/arsip-surat/create') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Arsip Surat </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.arsip-surat.index') }}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Surat Masuk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.arsip-surat.keluar') }}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Surat Keluar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

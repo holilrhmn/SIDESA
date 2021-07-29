@@ -15,7 +15,6 @@ class CreateWargaTable extends Migration
     {
         Schema::create('warga', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('NIK')->unique();
             $table->string('nama');
             $table->longText('alamat');
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
