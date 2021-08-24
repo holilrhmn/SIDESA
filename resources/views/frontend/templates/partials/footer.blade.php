@@ -8,7 +8,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      SIDESA. Copyright © 2020 Informatika 17
+      SIDESA. Copyright © 2020 
       </div>
     </div>
 </footer>

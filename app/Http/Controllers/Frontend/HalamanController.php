@@ -19,7 +19,7 @@ class HalamanController extends Controller
 
     public function kontak()
     {
-        $profil = Profil::all();
+        $profil = Profil::latest()->first();
         return view('frontend.kontak.index',compact('profil'));
     }
 }

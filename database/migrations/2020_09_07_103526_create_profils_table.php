@@ -22,6 +22,7 @@ class CreateProfilsTable extends Migration
             $table->string('telp');
             $table->string('email');
             $table->string('alamat');
+            $table->longText('lokasi');
             $table->timestamps();
         });
     }

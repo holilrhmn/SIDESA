@@ -1,7 +1,63 @@
 @extends('frontend.templates.default')
 
 @section('content')
-
+@if($slider->isNotEmpty())
+<div class="slider">
+  <ul class="slides">
+    @foreach($slider as $value)
+      
+    
+    <li>
+      <img src="{{asset(''.$value->cover)}}">
+      <div class="caption center-align">
+        <h3><b></b></h3>
+        <h5 class="light grey-text text-lighten-3"><b></b></h5>
+      </div>
+    </li>
+    @endforeach
+  </ul>
+</div>
+@else
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="{{asset('assets/dist/img/slider/img1.png')}}">
+      <div class="caption center-align">
+        <h3><b>SELAMAT DATANG DI SIDESA</b></h3>
+        <h5 class="light grey-text text-lighten-3"><b>Akses Cepat Informasi Desamu Sekarang.</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{{asset('assets/dist/img/slider/img2.png')}}">
+      <div class="caption left-align">
+        <h3><b>SELAMAT DATANG DI SIDESA</b></h3>
+        <h5 class="light grey-text text-lighten-3"><b>Akses Cepat Informasi Desamu Sekarang.</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{{asset('assets/dist/img/slider/img6.png')}}">
+      <div class="caption right-align">
+        <h3><b>SELAMAT DATANG DI SIDESA</b></h3>
+        <h5 class="light grey-text text-lighten-3"><b>Akses Cepat Informasi Desamu Sekarang.</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{{asset('assets/dist/img/slider/img4.png')}}">
+      <div class="caption center-align">
+        <h3><b>SELAMAT DATANG DI SIDESA</b></h3>
+        <h5 class="light grey-text text-lighten-3"><b>Akses Cepat Informasi Desamu Sekarang.</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{{asset('assets/dist/img/slider/img5.png')}}">
+      <div class="caption center-align">
+        <h3><b>SELAMAT DATANG DI SIDESA</b></h3>
+        <h5 class="light grey-text text-lighten-3"><b>Akses Cepat Informasi Desamu Sekarang.</b></h5>
+      </div>
+    </li>
+  </ul>
+</div>
+@endif
   <div class="container">
     <div class="section">
 
@@ -32,7 +88,7 @@
     </div>
   </div>
 
-
+ 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">

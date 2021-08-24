@@ -125,6 +125,6 @@ class SliderController extends Controller
     public function destroy(Slider $slider)
     {
         $slider->delete();
-        return redirect()->route('admin.paralax.index')->withDanger('Data Pengumuman Sudah Dihapus');
+        return redirect()->back()->withDanger('Data Pengumuman Sudah Dihapus');
     }
 }

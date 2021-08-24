@@ -63,6 +63,7 @@ class ProfilController extends Controller
          'sejarah'=> $request->sejarah,
          'tentang'=> $request->tentang,
          'fungsi'=> $request->fungsi,
+         'lokasi' => $request->lokasi,
         ]);
 
          if($profil) {
@@ -126,6 +127,7 @@ class ProfilController extends Controller
             'sejarah'=> $request->sejarah,
             'tentang'=> $request->tentang,
             'fungsi'=> $request->fungsi,
+            'lokasi' => $request->lokasi,
         ]);
 
         if($profil) {

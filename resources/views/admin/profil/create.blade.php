@@ -49,6 +49,14 @@
                 @enderror
             </div>
             <div class="form-group">
+                <label for=""@error('lokasi') class="text-danger" @enderror >Lokasi Map Desa</label>
+                <textarea name="lokasi" id="" rows="3" class="form-control  @error('lokasi') form-control is-invalid @enderror"
+                placeholder="Masukkan Lokasi Embed Google Map Desa">{{old ('lokasi') }}</textarea>
+                @error('lokasi')
+                    <span  class="text-danger"> {{ $message }} </span>
+                @enderror
+            </div>
+            <div class="form-group">
                 <label for=""@error('telp') class="text-danger" @enderror >Telepon Desa</label>
                 <input type="text" name="telp" class="form-control @error('telp') form-control is-invalid @enderror"
                 placeholder="Masukkan no telp Perusahaan" value="{{ old('telp') }}">
